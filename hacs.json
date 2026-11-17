@@ -1,4 +1,5 @@
 {
   "name": "Remote Map Card",
-  "filename": "remote-map-card.js"
+  "filename": "remote-map-card.js",
+  "render_readme": true
 }
