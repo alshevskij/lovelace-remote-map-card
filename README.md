@@ -2,6 +2,23 @@
 
 Кастомная Lovelace-карточка Home Assistant для создания интерактивного пульта управления. Можно использовать собственное изображение пульта или нарисовать его прямо в редакторе карточки.
 
+<p align="center">
+  <a href="README.md">🇷🇺 Русский</a> · <a href="README.en.md">🇬🇧 English</a>
+</p>
+
+<p align="center">
+  <img src="https://img.shields.io/badge/version-2026.11.1-blue" alt="Version">
+  <img src="https://img.shields.io/badge/HACS-Custom%20Repository-41BDF5" alt="HACS">
+  <img src="https://img.shields.io/github/license/alshevskij/lovelace-remote-map-card" alt="License">
+  <img src="https://img.shields.io/github/stars/alshevskij/lovelace-remote-map-card?style=flat" alt="GitHub Stars">
+</p>
+
+<p align="center">
+  <a href="https://my.home-assistant.io/redirect/hacs_repository/?owner=alshevskij&repository=lovelace-remote-map-card&category=plugin">
+    <img src="https://my.home-assistant.io/badges/hacs_repository.svg" alt="Открыть репозиторий Remote Map Card в HACS">
+  </a>
+</p>
+
 ## Возможности
 
 - **Два режима оформления:**
@@ -17,15 +34,23 @@
 
 ## Установка через HACS
 
-1. Откройте **HACS** в Home Assistant.
-2. Откройте меню репозиториев и выберите **Custom repositories / Пользовательские репозитории**.
-3. Добавьте:
-   - Repository: `https://github.com/alshevskij/lovelace-remote-map-card`
-   - Category: **Dashboard** (в некоторых версиях интерфейса — **Plugin**).
+### Через кнопку (рекомендуется)
+
+Нажмите на бейдж **Open HACS repository** выше. Home Assistant откроет страницу репозитория в HACS или Marketplace. Подтвердите добавление пользовательского репозитория, если появится такой запрос, затем установите Remote Map Card.
+
+### Вручную
+
+1. Откройте HACS в Home Assistant.
+2. Откройте меню и выберите **Custom repositories / Пользовательские репозитории**.
+3. Добавьте репозиторий:
+   - URL: `https://github.com/alshevskij/lovelace-remote-map-card`
+   - Category: **Dashboard** (в старом интерфейсе HACS — **Plugin**).
 4. Найдите **Remote Map Card** и установите её.
-5. Если ресурс не добавился автоматически, откройте **Настройки → Панели управления → Ресурсы** и добавьте ресурс типа **JavaScript Module**:
-   - URL: `/hacsfiles/lovelace-remote-map-card/remote-map-card.js`
-6. Обновите страницу Home Assistant.
+5. Обновите страницу Home Assistant.
+
+Если ресурс не добавился автоматически (например, если ресурсы панели управления управляются вручную через YAML), откройте **Настройки → Панели управления → Ресурсы** и добавьте ресурс типа **JavaScript Module**:
+
+`/hacsfiles/lovelace-remote-map-card/remote-map-card.js`
 
 ## Добавление карточки
 
