@@ -1,6 +1,6 @@
-# Remote Map Card
+# Remote Map Card for Home Assistant
 
-A custom Lovelace card for Home Assistant that lets you build an interactive remote control. Use your own remote image with clickable hotspots, or design the remote directly in the card editor.
+A custom Lovelace card for Home Assistant that lets you build an interactive remote control. Use your own image of a remote, or draw one directly in the card editor.
 
 <p align="center">
   <a href="README.md">🇷🇺 Русский</a> · <a href="README.en.md">🇬🇧 English</a>
@@ -21,29 +21,29 @@ A custom Lovelace card for Home Assistant that lets you build an interactive rem
 
 ## Features
 
-- **Two layout modes:**
-  - **Designed remote** — create a remote on a canvas with configurable buttons, shapes, colors, text, and icons.
-  - **Image remote** — use an image of your remote and place interactive hotspots over it.
+- **Two design modes:**
+  - **Designed remote** — a canvas with customizable buttons, shapes, colors, text, and icons.
+  - **Image remote** — an image of your remote with interactive hotspots placed on top.
 - Visual editor for adding, duplicating, deleting, moving, and configuring buttons.
 - Adjustable button dimensions and hotspot sizes.
-- Glass effect, background blur, and press glow in designed mode.
-- Editor grid, grid snapping, and alignment guides for precise positioning.
+- Glass effect, blur, and glow in designed mode.
+- Grid, grid snapping, and alignment guides for precise positioning.
 - Home Assistant actions: perform an action/service, toggle an entity, open more-info, navigate, or open a URL.
 - Optional hotspot visualization for debugging.
 - Mouse, touchscreen, and keyboard support.
 
-## Installation via HACS
+## Installation via HACS / Marketplace
 
 ### One-click installation (recommended)
 
-Click the **Open HACS repository** badge above. Home Assistant will open this repository in HACS or the Marketplace. If prompted, confirm adding the custom repository, then install Remote Map Card.
+Click the **Open HACS repository** badge above (in the README header). Home Assistant will open the repository in HACS or the Marketplace. If prompted, confirm adding the custom repository, then install Remote Map Card.
 
-### Manual HACS installation
+### Manual installation
 
 1. Open **HACS** in Home Assistant.
 2. Open the menu and select **Custom repositories**.
 3. Add this repository:
-   - Repository: `https://github.com/alshevskij/lovelace-remote-map-card`
+   - URL: `https://github.com/alshevskij/lovelace-remote-map-card`
    - Category: **Dashboard** (called **Plugin** in older HACS interfaces).
 4. Find **Remote Map Card** and install it.
 5. Refresh your Home Assistant page.
@@ -60,7 +60,9 @@ Open your dashboard editor, add a **Manual** card, and set its type:
 type: custom:remote-map-card
 ```
 
-Then open the card's visual editor.
+Alternatively, search for **Remote Map Card** in the card picker.
+
+After adding the card, open its visual editor.
 
 ## Designed remote mode
 
@@ -68,17 +70,17 @@ In this mode, the card draws the background and buttons itself. Main options:
 
 | Option | Description |
 | --- | --- |
-| `mode: designed` | Use the designed remote mode |
+| `mode: designed` | Designed remote mode |
 | `design.width` / `design.height` | Canvas dimensions in pixels |
 | `design.background` | Background color |
 | `design.radius` | Background corner radius |
-| `glass` | Enable the glass effect |
-| `glow` | Enable glow when a button is pressed |
+| `glass` | Glass effect |
+| `glow` | Glow when a button is pressed |
 | `glass_opacity` | Glass background opacity, 10–100 |
 | `glow_color` | Glow color |
-| `grid.show` | Show the editor grid |
+| `grid.show` | Show the grid in the editor |
 | `grid.snap` | Snap to the grid |
-| `grid.guides` | Show canvas and button alignment guides |
+| `grid.guides` | Show alignment guides for the canvas and other buttons |
 | `grid.size` | Grid spacing in pixels |
 
 Button coordinates `x` and `y` are percentages of the canvas. Button dimensions `w` and `h` are in pixels. Circle and square buttons automatically use equal width and height.
@@ -137,7 +139,7 @@ You can upload an image in the visual editor by dragging and dropping a file, se
 Button options:
 - `x`, `y` — hotspot center position as percentages of the image width and height;
 - `size` — hotspot diameter as a percentage of the image width;
-- `name` — hotspot name and hover tooltip;
+- `name` — hotspot name and tooltip;
 - `tap_action` — action to run when the hotspot is pressed;
 - `entity` — entity used by the `toggle` and `more-info` actions.
 
@@ -175,6 +177,16 @@ The card supports the following values for `tap_action.action`:
 
 For `toggle` and `more-info`, set the `entity` option on the button.
 
+## Remote appearance example
+
+<img width="406" height="663" alt="Remote Map Card example" src="https://github.com/user-attachments/assets/b7f6bbb2-82b1-4a5c-9a78-d580f4bf8411" />
+
+## About this project
+
+This card is primarily intended for emulating button presses on real infrared (IR) remote controls using smart IR hubs, for example hubs that work over MQTT (OpenBeken) or through the Tuya cloud.
+
+In essence, it is an enhanced and extended version of Home Assistant's built-in Picture Elements card.
+
 ## Editing and troubleshooting
 
 - Enable **Show hotspots on card (debug)** to display the active areas on the finished card.
@@ -186,7 +198,7 @@ For `toggle` and `more-info`, set the `entity` option on the button.
 
 ## Feedback
 
-Found a bug or have an idea for an improvement? Open an [Issue](https://github.com/alshevskij/lovelace-remote-map-card/issues).
+Report bugs and suggest improvements in [Issues](https://github.com/alshevskij/lovelace-remote-map-card/issues).
 
 ## License
 
