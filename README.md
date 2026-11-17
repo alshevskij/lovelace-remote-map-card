@@ -1,1 +1,1 @@
-# hass-remote-map-card
+# lovelace-remote-map-card
